@@ -1,4 +1,4 @@
-# cordova-plugin-barcode-scanner
+# cordova-plugin-1d-barcode-scanner
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20Android-blue.svg)](#requirements)
@@ -38,10 +38,10 @@ account required:
 
 ## Installation
 
-From the npm registry (once published):
+From the npm registry:
 
 ```bash
-cordova plugin add cordova-plugin-barcode-scanner
+cordova plugin add cordova-plugin-1d-barcode-scanner
 ```
 
 Directly from the Git repository:
@@ -62,7 +62,7 @@ iOS requires a usage description for the camera. The plugin adds a sensible
 default, but you can override it at install time:
 
 ```bash
-cordova plugin add cordova-plugin-barcode-scanner \
+cordova plugin add cordova-plugin-1d-barcode-scanner \
   --variable CAMERA_USAGE_DESCRIPTION="We use the camera to scan product barcodes."
 ```
 
