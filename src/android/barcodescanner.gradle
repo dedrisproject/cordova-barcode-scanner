@@ -1,0 +1,32 @@
+// Gradle dependencies for cordova-plugin-barcode-scanner (Android).
+//
+// CameraX provides the camera feed; ML Kit's *bundled* barcode model decodes
+// 1D barcodes fully offline (no Google Play Services download required).
+//
+// These versions build against compileSdk 33+, which matches cordova-android 12+.
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    def cameraxVersion = "1.2.3"
+
+    implementation "androidx.camera:camera-core:${cameraxVersion}"
+    implementation "androidx.camera:camera-camera2:${cameraxVersion}"
+    implementation "androidx.camera:camera-lifecycle:${cameraxVersion}"
+    implementation "androidx.camera:camera-view:${cameraxVersion}"
+
+    implementation "androidx.activity:activity:1.6.1"
+    implementation "androidx.core:core:1.9.0"
+
+    implementation "com.google.mlkit:barcode-scanning:17.1.0"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "cordova-plugin-barcode-scanner",
+  "version": "1.0.0",
+  "description": "Cordova plugin to scan 1D linear barcodes (EAN, UPC, Code 128, Code 39, Code 93, ITF, Codabar) on iOS and Android. QR codes and other 2D codes are intentionally NOT scanned.",
+  "cordova": {
+    "id": "cordova-plugin-barcode-scanner",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "main": "www/barcodescanner.js",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "barcode",
+    "barcode-scanner",
+    "scanner",
+    "ean",
+    "ean13",
+    "upc",
+    "code128",
+    "code39",
+    "itf",
+    "codabar",
+    "mlkit",
+    "avfoundation"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=9.0.0"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=12.0.0"
+    },
+    {
+      "name": "cordova-ios",
+      "version": ">=6.0.0"
+    }
+  ],
+  "author": "dedrisproject",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dedrisproject/cordova-barcode-scanner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dedrisproject/cordova-barcode-scanner/issues"
+  },
+  "homepage": "https://github.com/dedrisproject/cordova-barcode-scanner#readme"
+}

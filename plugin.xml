@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-barcode-scanner"
+        version="1.0.0">
+
+    <name>BarcodeScanner</name>
+    <description>Scan 1D linear barcodes (EAN, UPC, Code 128, Code 39, Code 93, ITF, Codabar) on iOS and Android. QR codes and other 2D codes are intentionally not scanned.</description>
+    <license>MIT</license>
+    <keywords>cordova,barcode,scanner,ean,upc,code128,mlkit,avfoundation</keywords>
+
+    <repo>https://github.com/dedrisproject/cordova-barcode-scanner.git</repo>
+    <issue>https://github.com/dedrisproject/cordova-barcode-scanner/issues</issue>
+
+    <!-- JavaScript interface -->
+    <js-module src="www/barcodescanner.js" name="BarcodeScanner">
+        <clobbers target="cordova.plugins.barcodeScanner" />
+    </js-module>
+
+    <!-- ============================ ANDROID ============================ -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BarcodeScanner">
+                <param name="android-package" value="com.dedris.barcodescanner.BarcodeScannerPlugin" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-feature android:name="android.hardware.camera" android:required="false" />
+            <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity
+                android:name="com.dedris.barcodescanner.BarcodeScannerActivity"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:screenOrientation="portrait"
+                android:exported="false" />
+        </config-file>
+
+        <source-file src="src/android/BarcodeScannerPlugin.java" target-dir="src/com/dedris/barcodescanner" />
+        <source-file src="src/android/BarcodeScannerActivity.java" target-dir="src/com/dedris/barcodescanner" />
+
+        <framework src="src/android/barcodescanner.gradle" custom="true" type="gradleReference" />
+    </platform>
+
+    <!-- ============================== iOS ============================== -->
+    <platform name="ios">
+        <preference name="CAMERA_USAGE_DESCRIPTION" default="This app uses the camera to scan barcodes." />
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="BarcodeScanner">
+                <param name="ios-package" value="BarcodeScannerPlugin" />
+            </feature>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>$CAMERA_USAGE_DESCRIPTION</string>
+        </config-file>
+
+        <header-file src="src/ios/BarcodeScannerPlugin.h" />
+        <source-file src="src/ios/BarcodeScannerPlugin.m" />
+        <header-file src="src/ios/BarcodeScannerViewController.h" />
+        <source-file src="src/ios/BarcodeScannerViewController.m" />
+
+        <framework src="AVFoundation.framework" />
+        <framework src="AudioToolbox.framework" />
+    </platform>
+</plugin>
