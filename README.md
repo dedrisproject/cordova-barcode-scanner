@@ -47,13 +47,13 @@ cordova plugin add cordova-plugin-1d-barcode-scanner
 Directly from the Git repository:
 
 ```bash
-cordova plugin add https://github.com/dedrisproject/cordova-barcode-scanner.git
+cordova plugin add https://github.com/dedrisproject/cordova-plugin-1d-barcode-scanner.git
 ```
 
 Or from a local checkout:
 
 ```bash
-cordova plugin add /path/to/cordova-barcode-scanner
+cordova plugin add /path/to/cordova-plugin-1d-barcode-scanner
 ```
 
 ### iOS camera permission message
@@ -228,7 +228,7 @@ cd barcodeDemo
 cordova platform add android
 cordova platform add ios
 
-cordova plugin add https://github.com/dedrisproject/cordova-barcode-scanner.git
+cordova plugin add https://github.com/dedrisproject/cordova-plugin-1d-barcode-scanner.git
 
 # Replace www/index.html and www/js/index.js with the snippets above, then:
 cordova run android
@@ -276,4 +276,4 @@ ignored.
 
 [MIT](LICENSE) © dedrisproject — free and open source. Contributions and issues
 are welcome at the
-[project repository](https://github.com/dedrisproject/cordova-barcode-scanner).
+[project repository](https://github.com/dedrisproject/cordova-plugin-1d-barcode-scanner).

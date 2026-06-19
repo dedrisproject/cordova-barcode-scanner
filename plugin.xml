@@ -2,15 +2,15 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-1d-barcode-scanner"
-        version="1.0.0">
+        version="1.0.1">
 
     <name>BarcodeScanner</name>
     <description>Scan 1D linear barcodes (EAN, UPC, Code 128, Code 39, Code 93, ITF, Codabar) on iOS and Android. QR codes and other 2D codes are intentionally not scanned.</description>
     <license>MIT</license>
     <keywords>cordova,barcode,scanner,ean,upc,code128,mlkit,avfoundation</keywords>
 
-    <repo>https://github.com/dedrisproject/cordova-barcode-scanner.git</repo>
-    <issue>https://github.com/dedrisproject/cordova-barcode-scanner/issues</issue>
+    <repo>https://github.com/dedrisproject/cordova-plugin-1d-barcode-scanner.git</repo>
+    <issue>https://github.com/dedrisproject/cordova-plugin-1d-barcode-scanner/issues</issue>
 
     <!-- JavaScript interface -->
     <js-module src="www/barcodescanner.js" name="BarcodeScanner">
